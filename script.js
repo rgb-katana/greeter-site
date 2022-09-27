@@ -24,9 +24,23 @@ submitButton.addEventListener('click', function () {
   document.querySelector('.greeting').classList.remove('hidden');
   if (currentHour >= 5 && currentHour <= 11) {
     document.querySelector('.morning-greet').classList.remove('hidden');
+    document.querySelector('.morning-greet').classList.add('display');
+    document.querySelector(
+      `.morning-greeting`
+    ).textContent = `Доброе утро, ${userName}`;
+    // document.querySelector('.morning-greeting')
   } else if (currentHour > 11 && currentHour < 18) {
     document.querySelector('.day-greet').classList.remove('hidden');
+    document.querySelector('.day-greet').classList.add('display');
+    document.querySelector(
+      `.day-greeting`
+    ).textContent = `Добрый день, ${userName}`;
+    // document.querySelector('.day-greeting')
   } else if (currentHour >= 18 && currentHour < 5) {
     document.querySelector('.evening-greet').classList.remove('evening');
+    document.querySelector('.evening-greet').classList.add('display');
+    document.querySelector(
+      `.evening-greeting`
+    ).textContent = `Добрый вечер, ${userName}`;
   }
 });
