@@ -22,24 +22,35 @@ submitButton.addEventListener('click', function () {
   document.querySelector('.content').classList.remove('display');
   document.querySelector('.content').classList.add('hidden');
   document.querySelector('.greeting').classList.remove('hidden');
+  document.querySelector('.greeting').classList.add('display');
   if (currentHour >= 5 && currentHour <= 11) {
     document.querySelector('.morning-greet').classList.remove('hidden');
     document.querySelector('.morning-greet').classList.add('display');
-    document.querySelector(
-      `.morning-greeting`
+    document.getElementById(`morning-image`).style.animation =
+      'slidein 2s ease';
+    document.getElementById(`morning-greeting`).style.animation =
+      'appear 3s ease';
+    document.getElementById(
+      `morning-greeting`
     ).textContent = `Доброе утро, ${userName}`;
     // document.querySelector('.morning-greeting')
   } else if (currentHour > 11 && currentHour < 18) {
     document.querySelector('.day-greet').classList.remove('hidden');
     document.querySelector('.day-greet').classList.add('display');
-    document.querySelector(
-      `.day-greeting`
+    document.getElementById(`image-day`).style.animation = 'slidein 2s ease';
+    document.getElementById(`day-greeting`).style.animation = 'appear 3s ease';
+    document.getElementById(
+      `day-greeting`
     ).textContent = `Добрый день, ${userName}`;
     // document.querySelector('.day-greeting')
   } else if (currentHour >= 18 && currentHour < 5) {
     document.querySelector('.evening-greet').classList.remove('evening');
     document.querySelector('.evening-greet').classList.add('display');
-    document.querySelector(
+    document.getElementById(`image-evening`).style.animation =
+      'slidein 2s ease';
+    document.getElementById(`evening-greeting`).style.animation =
+      'appear 3s ease';
+    document.getElementById(
       `.evening-greeting`
     ).textContent = `Добрый вечер, ${userName}`;
   }

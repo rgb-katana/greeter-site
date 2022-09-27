@@ -34,6 +34,10 @@ form {
   text-align: center;
 }
 
+img {
+  max-width: 856px;
+}
+
 label {
   display: block;
   margin-bottom: 25px;
@@ -64,52 +68,56 @@ input {
   width: 80%;
   height: 100vh;
   margin: 0 auto;
+  position: relative;
 }
 
-.morning-greet {
-  height: 100vh;
-}
-.morning-greet img {
-  width: 80%;
-  height: auto;
-}
-
-.day-greet {
-  height: 100vh;
-}
-
-.day-greet img {
-  width: 80%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.evening-greet {
-  height: 100vh;
-}
-
-.evening-greet img {
-  width: 80%;
-  height: auto;
-}
-
-img {
+/* img {
   position: absolute;
-}
+} */
 
 p {
-  position: relative;
+  position: absolute;
   color: white;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 4px 4px 6px black;
+  font-size: 30px;
 }
 
 .hidden {
   display: none;
 }
 
+.day-greet img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.evening-greet img {
+  width: 100%;
+  height: auto;
+}
+
 @media only screen and (max-width: 420px) {
   body {
     font-size: 20px;
+  }
+
+  .morning-greet img {
+    width: 100vw;
+    height: 75vh;
+    height: auto;
+  }
+
+  .day-greet img {
+    width: 100vw;
+    height: 75vh;
+    border-radius: 10px;
+  }
+
+  .evening-greet img {
+    width: 100vw;
+    height: 75vh;
+    height: auto;
   }
 }
 
@@ -117,10 +125,78 @@ p {
   body {
     font-size: 25px;
   }
+
+  .morning-greet img {
+    width: 100%;
+    height: auto;
+  }
+
+  .day-greet img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .evening-greet img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media only screen and (min-width: 960px) {
   body {
     font-size: 30px;
+  }
+
+  .morning-greet {
+    height: 100vh;
+  }
+
+  .morning-greet img {
+    width: 100vw;
+    height: 80vh;
+    height: auto;
+  }
+
+  .day-greet {
+    height: 100vh;
+  }
+
+  .day-greet img {
+    width: 100vw;
+    height: 80vh;
+    border-radius: 10px;
+  }
+
+  .evening-greet {
+    height: 100vh;
+  }
+
+  .evening-greet img {
+    width: 100vw;
+    height: 80vh;
+    height: auto;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
