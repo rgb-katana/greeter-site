@@ -5,21 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maxiumum-scale=1.0"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
   </head>
-  <body class="evening">
-    <div class="content">
+  <body class="daytime">
+    <div class="content display">
       <form>
         <label for="fname">Как вас зовут?</label>
         <input type="text" id="fname" name="fname" />
-        <input type="submit" value="Submit" />
+        <div class="fname-button">Отправить</div>
       </form>
-      <div class="morning-greet greet hidden"></div>
-      <div class="day-greet greet hidden"></div>
-      <div class="evening-greet greet hidden"></div>
+    </div>
+    <div class="greeting">
+      <div class="morning-greet greet hidden">
+        <img src="/images/morning-cat.png" alt="morning-cat" />
+        <p class="morning-greeting"></p>
+      </div>
+      <div class="day-greet greet hidden">
+        <img src="/images/day-cat.png" alt="day-cat" />
+        <p class="day-greeting"></p>
+      </div>
+      <div class="evening-greet greet hidden">
+        <img src="/images/evening-cat.png" alt="evening-cat" />
+        <p class="evening-greeting"></p>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>
